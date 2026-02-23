@@ -7,6 +7,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { WaveSeparator, WaveSeparatorTop } from "../WaterElemets";
+import Video from "./Video";
 
 const fundingItems = [
   {
@@ -109,6 +110,8 @@ const Funding = () => {
           })}
         </div>
       </div>
+
+      <Video/>
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <WaveSeparator color="hsl(200, 20%, 98%)" />
       </div>

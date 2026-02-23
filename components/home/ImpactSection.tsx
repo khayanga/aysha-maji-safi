@@ -99,7 +99,7 @@ const Vision = () => {
 // --- Main Page Component ---
 const ImpactSection = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div id="impact" className="min-h-screen bg-gray-50">
       
       <section className="relative py-24 overflow-hidden">
         

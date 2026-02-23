@@ -12,7 +12,8 @@ import {
   Send,
   Building2,
 } from "lucide-react";
-// import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
+
 
 interface FormData {
   name: string;
@@ -23,15 +24,19 @@ interface FormData {
 }
 
 export default function Contact() {
-//   const { toast } = useToast();
-  const [loading, setLoading] = useState(false);
 
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast()
+ 
+
+  
   const [formData, setFormData] = useState<FormData>({
     name: "",
-    organization: "",
     email: "",
-    type: "Investor",
     message: "",
+    organization: "",
+    type: "Investor",
+
   });
 
   const handleChange = (
@@ -43,17 +48,12 @@ export default function Contact() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (
-      !formData.name ||
-      !formData.organization ||
-      !formData.email ||
-      !formData.message
-    ) {
-        // toast({
-        //     title: "Missing information",
-        //     description: "Please complete all required fields.",
-        //     variant: "destructive",
-        // });
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Missing information",
+        description: "Please fill in all fields before sending.",
+        variant: "destructive",
+      });
       return;
     }
 
@@ -61,37 +61,36 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec",
+        "https://script.google.com/macros/s/AKfycby4sRF_MtSW9olXO1Nem6aRddVQJ8_-75VFrAdvmG_f8Yopf5hIZqcR3FftK3sI3Pk/exec",
         {
           method: "POST",
           headers: {
             "Content-Type": "text/plain;charset=utf-8",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            organization: formData.organization,
+            type: formData.type,
+          }),
         }
       );
 
       if (!response.ok) throw new Error("Request failed");
 
-    //   toast({
-    //     title: "Inquiry submitted",
-    //     description:
-    //       "Thank you for your interest. Our team will respond within 24 hours.",
-    //   });
-
-      setFormData({
-        name: "",
-        organization: "",
-        email: "",
-        type: "Investor",
-        message: "",
+      toast({
+        title: "Message sent ✨",
+        description: "Thanks for reaching out! We’ll get back to you soon.",
       });
+
+      setFormData({ name: "", email: "", message: "" , organization: "", type: "Investor"});
     } catch (err) {
-    //   toast({
-    //     title: "Submission failed",
-    //     description: "Please try again later.",
-    //     variant: "destructive",
-    //   });
+      toast({
+        title: "Failed to send",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }
@@ -99,7 +98,7 @@ export default function Contact() {
 
   return (
     <section
-      id="contact"
+     
       className="relative py-24 md:py-32 px-6 bg-gray-50"
     >
       <div className="mx-auto max-w-6xl space-y-14">
@@ -119,7 +118,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
           {/* Form */}
-          <div className="bg-card border rounded-2xl p-8 shadow-lg">
+          <div id="contact" className="bg-card border rounded-2xl p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
 
               <div className="grid md:grid-cols-2 gap-4">
@@ -225,13 +224,13 @@ export default function Contact() {
             {[
               {
                 icon: Mail,
-                text: "invest@companyname.co.ke",
-                href: "mailto:invest@companyname.co.ke",
+                text: "kiumajisafiayshah@gmail.com",
+                href: "mailto:kiumajisafiayshah@gmail.com",
               },
               {
                 icon: Phone,
-                text: "+254 712 345 678",
-                href: "tel:+254712345678",
+                text: "+254 721 210 638",
+                href: "tel:+254721210638",
               },
               {
                 icon: MapPin,
