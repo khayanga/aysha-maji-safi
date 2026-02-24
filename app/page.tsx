@@ -1,4 +1,5 @@
 import AnimatedSection from "@/components/AnimatedSection";
+import Gallery from "@/components/home/Gallery";
 import Hero from "@/components/home/Hero";
 import ImpactSection from "@/components/home/ImpactSection";
 import Invest from "@/components/home/Invest";
@@ -26,6 +27,9 @@ export default function Home() {
       </AnimatedSection>
       <AnimatedSection>
         <Invest />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Gallery />
       </AnimatedSection>
     </main>
   );
