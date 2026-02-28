@@ -1,7 +1,9 @@
 import React from "react";
 import { 
   Droplets, Users, TrendingUp, CheckCircle2, 
-  Target, Rocket, ShieldCheck, Waves, Truck, Factory, Award, ArrowRight
+  Target, Rocket, ShieldCheck, Waves, Truck, Factory, Award, ArrowRight,
+  DollarSign,
+  Banknote
 } from "lucide-react";
 
 // --- Sub-Component: Stat Card ---
@@ -120,7 +122,7 @@ const ImpactSection = () => {
           {/* Interactive Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
             <StatCard title="5+" label="Refilling Stations" icon={Droplets} />
-            <StatCard title="Ksh 350K" label="Annual Revenue" icon={TrendingUp} />
+            <StatCard title="Ksh 350K" label="Annual Revenue" icon={Banknote} />
             <StatCard title="3+" label="Core Team Members" icon={Users} />
           </div>
 

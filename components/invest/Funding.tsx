@@ -5,6 +5,7 @@ import {
   Truck,
   Recycle,
   ShieldCheck,
+  Waves,
 } from "lucide-react";
 import { WaveSeparator, WaveSeparatorTop } from "../WaterElemets";
 import Video from "./Video";
@@ -12,7 +13,7 @@ import Video from "./Video";
 const fundingItems = [
   {
     title: "Borehole Construction",
-    icon: Droplets,
+    icon: Waves,
     desc: "Drilling and equipping boreholes to ensure independent water sourcing.",
   },
   {

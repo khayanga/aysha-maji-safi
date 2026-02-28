@@ -1,5 +1,5 @@
 
-import { AlertTriangle, Droplets, Trash2, CloudRain } from "lucide-react";
+import { AlertTriangle,  Trash2, CloudRain, BottleWine } from "lucide-react";
 
 export const problems = [
   {
@@ -14,7 +14,7 @@ export const problems = [
     title: "Bottled Water Is Expensive",
     description:
       "Families often pay significantly more per liter for bottled water than wealthier households connected to municipal systems. The poorest communities end up paying the highest price for a basic human need.",
-    icon: Droplets,
+    icon: BottleWine,
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
   },

@@ -1,4 +1,4 @@
-import { Droplets, Truck } from "lucide-react";
+import { BottleWine, Building, Droplets, Truck } from "lucide-react";
 import { WaveSeparator,  WaveSeparatorTop } from "../WaterElemets";
 
 const solutions = [
@@ -6,7 +6,7 @@ const solutions = [
     title: "Refilling Stations",
     description:
       "Affordable, clean water stations placed within informal settlements to ensure every household has safe drinking water at low cost.",
-    icon: Droplets,
+    icon: Building,
     iconBg: "bg-linear-to-r from-primary to-emerald-500",
     iconColor: "text-white",
   },
@@ -14,7 +14,7 @@ const solutions = [
     title: "Glass Bottled Water",
     description:
       "Eco-friendly glass bottled water for events, restaurants, and supermarkets, reducing single-use plastic and promoting sustainability.",
-    icon: Droplets,
+    icon: BottleWine,
     iconBg: "bg-linear-to-r from-primary to-emerald-500",
 
     iconColor: "text-white",
