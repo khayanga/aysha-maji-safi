@@ -37,6 +37,14 @@ const Navbar = () => {
             Home
           </Link>
           <Link
+            href="/#solution"
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              pathname === "/" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            Solutions
+          </Link>
+          <Link
             href="/#impact"
             className={`text-sm font-medium transition-colors hover:text-primary ${
               pathname === "/" ? "text-primary" : "text-muted-foreground"
@@ -44,14 +52,7 @@ const Navbar = () => {
           >
             Impact
           </Link>
-          <Link
-            href="/#solution"
-            className={`text-sm font-medium transition-colors hover:text-primary ${
-              pathname === "/" ? "text-primary" : "text-muted-foreground"
-            }`}
-          >
-            Solution
-          </Link>
+          
           <Link
             href="/invest"
             className={`text-sm font-medium transition-colors hover:text-primary ${

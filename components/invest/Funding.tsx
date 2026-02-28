@@ -49,11 +49,11 @@ const Funding = () => {
           <h2 className="text-3xl text-primary md:text-4xl font-bold ">
             Funding Breakdown
           </h2>
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-6 text-md text-gray-600 max-w-2xl mx-auto">
             Strategic investment will enable infrastructure expansion,
             regulatory compliance, and sustainable growth across Kenya,Every
             shilling is allocated to build infrastructure that delivers lasting
-            impact..
+            impact.
           </p>
         </div>
 
@@ -94,7 +94,7 @@ const Funding = () => {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-md leading-relaxed">
                       {item.desc}
                     </p>
 
