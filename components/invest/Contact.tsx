@@ -98,6 +98,7 @@ export default function Contact() {
 
   return (
     <section
+    id="contact"
      
       className="relative py-24 md:py-32 px-6 bg-gray-50"
     >

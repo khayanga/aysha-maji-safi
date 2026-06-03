@@ -54,16 +54,16 @@ const Navbar = () => {
           </Link>
           
           <Link
-            href="/invest"
+            href="/about"
             className={`text-sm font-medium transition-colors hover:text-primary ${
               pathname === "/" ? "text-primary" : "text-muted-foreground"
             }`}
           >
-            Contact Us
+            About Us
           </Link>
 
           <Link
-            href="/invest"
+            href="/about#contact"
             className="
                 inline-flex items-center justify-center
                 rounded-md
@@ -105,7 +105,17 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="/invest"
+            href="/about"
+            onClick={() => setOpen(false)}
+            className={` block py-2 text-sm font-medium transition-colors hover:text-primary ${
+              pathname === "/about" ? "text-primary" : "text-muted-foreground"
+            }`}
+          >
+            About Us
+          </Link>
+
+          <Link
+            href="/about#contact"
             onClick={() => setOpen(false)}
             className="
                 items-center justify-center
