@@ -2,12 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowUpRight, FileText } from "lucide-react";
 
 const team = [
   {
     name: "Aysha Sadi Rashid",
     role: "Founder",
     image: "/aysha.jpeg",
+    profileLink:
+      "https://drive.google.com/file/d/1wk4wWZirep0r84a6-ggQii5ecdEIHIwG/view?usp=drivesdk",
     description:
       "Founder of Ayshah Kiu Maji Safi, driving the vision of sustainable and equitable water access across communities.",
   },
@@ -15,6 +19,8 @@ const team = [
     name: "Swalha Sharif Hassan",
     role: "Co-Founder",
     image: "/swalha.jpeg",
+    profileLink:
+      "https://docs.google.com/document/d/1EzQLMlf_-F1Vgsyz53jOVFTexZ3-3qYV/edit?usp=drivesdk&ouid=107047880225478792964&rtpof=true&sd=true",
     description:
       "Supports strategic development, growth initiatives, and operational planning for long-term impact.",
   },
@@ -22,6 +28,8 @@ const team = [
     name: "Muhammed Khamisi",
     role: "Program Officer (Management)",
     image: "/hamisi.jpeg",
+    profileLink:
+      "https://docs.google.com/document/d/1r8G2K_u-v5D5K5GjImp2KhaLJsEx8hgl/edit?usp=drivesdk&ouid=107047880225478792964&rtpof=true&sd=true",
     description:
       "Oversees program implementation and ensures smooth coordination and delivery of organizational objectives.",
   },
@@ -29,6 +37,8 @@ const team = [
     name: "Mariam Karama",
     role: "Finance Officer",
     image: "/mariam.jpeg",
+    profileLink:
+      "https://docs.google.com/document/d/1Kbj1YsFK8fs2PPo3JDQtA9WamQMQLQTX/edit?usp=drivesdk&ouid=107047880225478792964&rtpof=true&sd=true",
     description:
       "Manages budgeting, financial reporting, and ensures transparency and accountability in all financial operations.",
   },
@@ -48,8 +58,7 @@ export default function Team() {
           </h2>
 
           <h3 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
-            The People Driving{" "}
-            <span className="text-emerald-500">Impact</span>
+            The People Driving <span className="text-emerald-500">Impact</span>
           </h3>
 
           <p className="mt-6 text-gray-600 text-lg leading-relaxed">
@@ -81,14 +90,25 @@ export default function Team() {
               {/* Content */}
               <div className="p-6">
                 <div className="mb-3">
-                  <span className="inline-block px-3 py-1 text-xs font-semibold bg-emerald-50 text-emerald-600 rounded-full">
+                  <span className="inline-block px-3 py-1 text-sm font-semibold bg-emerald-50 text-emerald-600 rounded-full">
                     {member.role}
                   </span>
                 </div>
 
-                <h4 className="text-xl font-bold text-gray-900">
-                  {member.name}
-                </h4>
+                <div className="flex items-start justify-between gap-3">
+                  <h4 className="text-xl font-bold text-gray-900">
+                    {member.name}
+                  </h4>
+
+                  <Link
+                    href={member.profileLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-all hover:bg-emerald-500 hover:text-white"
+                  >
+                    <FileText size={18} />
+                  </Link>
+                </div>
 
                 <p className="mt-3 text-gray-600 text-md leading-relaxed">
                   {member.description}
